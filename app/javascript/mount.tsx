@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import SimpleComponent from "./Simple"
 
 export default function mount(components = {}) {
   const mountComponents = () => {

@@ -14,6 +14,8 @@ ActiveStorage.start()
 
 import mount from "../mount";
 import SimpleComponent from "../Simple"
+import React from "react"
+import ReactDOM from "react-dom"
 
 mount({
   SimpleComponent,
@@ -21,4 +23,7 @@ mount({
 
 window.addEventListener("ajax:success", () => {
   console.log("AJAX SUCCESS")
+  setTimeout(() => {
+    ReactDOM.render(<SimpleComponent />, document.querySelector("[data-react-component='SimpleComponent']"))
+  })
 })
